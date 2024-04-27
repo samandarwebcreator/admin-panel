@@ -1,0 +1,133 @@
+@use "../../scss/veriables.scss" as vars;
+
+%flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__main-box {
+  @extend %flex;
+  width: 100%;
+
+  .login__image-site {
+    height: 100vh;
+    width: 50%;
+    background-image: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(0, 103, 244, 0.45) 0%,
+      #0067f4 100%
+    ) !important;
+    animation: moveFromLeftToRight 1s ease-in-out forwards;
+  }
+
+  .login__image {
+    max-width: 573px;
+    width: 100%;
+    max-height: 463px;
+    height: 100%;
+    margin-top: 150px;
+    animation: moveFromBottomToTop 1s ease-in-out forwards;
+  }
+
+  @keyframes moveFromLeftToRight {
+    from {
+      transform: translateX(-45%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveFromBottomToTop {
+    from {
+      transform: translateY(45%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes moveToTop {
+    from {
+      transform: translateY(40%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .login__container {
+    width: 50%;
+    padding: 150px;
+    animation: moveToTop 1s ease-in-out forwards;
+
+    .ant-input-affix-wrapper {
+      border-color: vars.$icon-color;
+
+      & .ant-input {
+        &::placeholder {
+          color: vars.$icon-color;
+        }
+      }
+    }
+
+    .custom-title {
+      color: vars.$dark-blue;
+      font-weight: 700;
+    }
+
+    .label__star {
+      color: #f76659;
+    }
+    .login_password-update {
+      width: 100%;
+      @extend %flex;
+      justify-content: space-between !important;
+      margin-bottom: 20px;
+    }
+
+    .custom-button {
+      background-color: vars.$button-color !important;
+      padding: 8px 20px 32px 12px !important;
+      text-align: center;
+
+      & span {
+        margin-bottom: 4px !important;
+        line-height: 0 !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    .ant-checkbox-inner {
+      border-color: vars.$icon-color !important;
+    }
+
+    .custom-footer {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .login__icons,
+    .custom-checkbox {
+      color: vars.$icon-color;
+      margin-right: 5px;
+    }
+
+    .ant-form-item-control-input-content {
+      margin-top: 7px;
+    }
+
+    .login__link-color {
+      color: vars.$button-color;
+    }
+
+    .login__footer-text {
+      position: fixed;
+      bottom: 0px;
+      color: vars.$icon-color;
+      font-size: 14px;
+      font-family: "Inter", Arial, sans-serif;
+    }
+  }
+}

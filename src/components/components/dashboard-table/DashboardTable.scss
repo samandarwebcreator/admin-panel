@@ -1,0 +1,28 @@
+@use "../../../scss/veriables.scss" as vars;
+
+.dashboard__table {
+  width: 100%;
+  padding: 0px 10px;
+
+  .ant-table-cell {
+    text-align: center;
+  }
+
+  th {
+    text-align: center !important;
+    margin-left: 10px !important;
+  }
+
+  h3 {
+    width: 100%;
+    color: vars.$chart-info;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .ant-table {
+    border-radius: 0px !important;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin button-disable() {
+  border-color: transparent;
+  background-color: transparent;
+  padding: 0px;
+  margin: 0;
+  cursor: pointer;
+}

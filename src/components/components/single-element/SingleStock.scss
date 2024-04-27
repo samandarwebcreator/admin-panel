@@ -1,0 +1,121 @@
+%flex {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.marketing__single {
+  padding: 30px;
+  background-color: #fff;
+  margin-top: 20px;
+  margin-right: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  @extend %flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .line__span {
+    width: 100%;
+    height: 2px;
+    background-color: #ebedee;
+    display: block;
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .marketing__single-wrapper {
+    @extend %flex;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .marketting__inner-case {
+    @extend %flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .marketting__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row !important;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .status__maketing {
+    display: flex;
+    align-items: center;
+
+    gap: 130px;
+
+    div {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+  }
+
+  input {
+    width: 50% !important;
+    margin-right: 160px !important;
+  }
+
+  input[type="text"] {
+    margin-right: 10px !important;
+  }
+
+  .banner__inner {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  input[placeholder="Имя"] {
+    margin-left: 95px !important;
+    width: 100% !important;
+  }
+  input[placeholder="Русское имя"] {
+    margin-left: 0 !important;
+  }
+
+  input[placeholder="Узбекское имя "] {
+    margin-left: 0px !important;
+  }
+
+  input[placeholder="Мнение"] {
+    margin-left: 0 !important;
+    margin-right: 100px !important;
+  }
+
+  .ant-picker {
+    margin-left: 62px;
+  }
+
+  .stock__datepicker {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .type__marketing {
+    gap: 152px !important;
+  }
+
+  .select__inner {
+    .ant-select {
+      width: 50%;
+      margin-right: 100px;
+    }
+  }
+}

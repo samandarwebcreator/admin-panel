@@ -1,0 +1,37 @@
+@use "../../../scss/veriables.scss" as vars;
+
+.stock__main {
+  padding: 20px;
+
+  tr {
+    cursor: pointer;
+  }
+
+  .status__span {
+    padding: 8px 10px;
+    border-radius: 4px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+
+    &-active {
+      background-color: vars.$marketing-status-bg;
+      color: vars.$error-title;
+      padding: 8px 19px;
+    }
+
+    &-inactive {
+      color: vars.$status-inactive;
+      background-color: vars.$status-inactive-bg;
+    }
+  }
+  .ant-pagination {
+    background-color: #fff;
+    margin: 0px !important;
+    padding: 10px !important;
+    border-radius: 0px 0px 10px 10px;
+  }
+
+  .ant-btn {
+    padding: 0px 5px 0px 5px !important;
+  }
+}

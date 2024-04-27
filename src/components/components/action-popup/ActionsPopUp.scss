@@ -1,0 +1,79 @@
+@use "../../../scss/veriables.scss" as vars;
+@use "../../../scss/mixins.scss" as mix;
+
+.actions__popup-main {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  gap: 3px;
+  width: 200px !important;
+  margin-bottom: 2px;
+
+  .actions__pupop-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    flex-direction: row !important;
+    padding: 10px;
+    width: 100%;
+    border-radius: 7px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    span {
+      padding: 2px 7px;
+      font-size: 18px;
+      color: vars.$error-title;
+      border-radius: 5px;
+      background-color: vars.$marketing-status-bg;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: "Inter", sans-serif;
+      color: #000;
+    }
+  }
+
+  .line-popup {
+    width: 100%;
+    height: 1px;
+    background-color: #e5e9eb;
+    display: block;
+  }
+
+  .actions__popup-button {
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+    color: red;
+    @include mix.button-disable();
+    padding: 5px 30px 5px 8px;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    border-radius: 7px;
+
+    span {
+      padding: 6px 7px 2px 7px;
+      font-size: 20px;
+      color: vars.$status-inactive;
+      background-color: vars.$status-inactive-bg;
+      border-radius: 5px;
+    }
+
+    p {
+      font-size: 16px;
+      font-family: "Inter", sans-serif;
+      color: #000;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@use "../../../scss/veriables.scss" as vars;
+
+.main__tab-change {
+  width: 880px;
+  height: 550px;
+  background-color: #fff !important;
+  padding: 20px;
+  border-radius: 10px;
+
+  .ant-tabs-tab {
+    padding: 0px !important;
+  }
+
+  .custom-chart .g2-series-area .g2-line {
+    stroke-linecap: round;
+  }
+
+  .ant-tabs-nav-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main__title {
+    color: vars.$dashboard-text;
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+  }
+
+  .chart__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px 10px 20px;
+    margin-bottom: 20px;
+  }
+
+  tspan {
+    fill: vars.$chart-info !important;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "Inter", sans-serif;
+  }
+  border: 1px solid red top bottom;
+}
+
+.progress__line-charts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+
+.charts__main-box {
+  display: flex;
+  align-items: start;
+  width: 100%;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.progress__main-box {
+  font-family: "Inter", sans-serif;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  .progress__box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px 50px 20px 30px;
+    width: 425px;
+    height: 250px;
+    border-radius: 10px;
+    justify-content: space-around;
+  }
+
+  .order__rate {
+    color: vars.$chart-info;
+    font-size: 16px;
+  }
+
+  .charts__outer-percent {
+    font-size: 32px;
+    margin-top: 8px;
+  }
+
+  .ant-progress-text {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Inter", sans-serif;
+  }
+
+  .green-progress,
+  .green__percent {
+    color: #1ac19d !important;
+  }
+
+  .purple-progress,
+  .purple__percent {
+    color: #a23fee !important;
+  }
+
+  .ant-progress-inner {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+.tiny__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 400px;
+  font-family: "Inter", sans-serif;
+
+  .tiny__chart-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .tiny__chart-title {
+    color: vars.$chart-info;
+  }
+
+  .tiny__chart-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+
+    h3 {
+      font-size: 32px;
+    }
+  }
+
+  .tiny__chart-profit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 18px;
+    background-color: rgba(26, 193, 157, 0.15);
+    color: #1ac19d;
+    font-size: 16px;
+    font-weight: 600;
+
+    span {
+      padding: 4px 5px 2px 5px;
+      background-color: rgba(26, 193, 157, 0.2);
+      border-radius: 50%;
+      font-size: 12px;
+    }
+  }
+  .tiny__chart-inner:first-child {
+    .tiny__chart-profit {
+      background-color: rgba(242, 39, 28, 0.1);
+      color: #f2271c;
+
+      span {
+        background-color: rgba(242, 39, 28, 0.15);
+      }
+    }
+  }
+}
+
+.recharts-curve {
+  width: 100% !important;
+}
+
+.recharts__wrapper {
+  width: 100% !important;
+  height: 100%;
+}

@@ -1,0 +1,42 @@
+@use "../../../../../scss/veriables.scss" as vars;
+@use "../../../../../scss/mixins.scss" as mix;
+
+.main__upload-image {
+  width: 200px;
+  height: 250px;
+
+  .upload__image-box {
+    max-width: 100%;
+    max-height: 200px;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px dashed rgba(0, 0, 0, 0.114);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .uploaded__image {
+    width: 92%;
+    height: 92%;
+    border-radius: 50%;
+    border: 0.2px solid rgba(0, 0, 0, 0.114);
+  }
+
+  .upload__button {
+    @include mix.button-disable();
+    margin-top: 20px;
+    border: 1px solid transparent;
+    color: vars.$error-title;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    margin-left: 47px;
+
+    &:hover {
+      color: red;
+    }
+  }
+}

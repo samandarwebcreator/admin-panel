@@ -1,0 +1,31 @@
+@use "../../scss/mixins.scss" as mix;
+
+.header__main-box {
+  height: 60px;
+  background-color: white !important;
+  display: flex;
+  border-bottom: 2px solid #e5e9eb;
+
+  .header__content {
+    margin-left: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      @include mix.button-disable();
+    }
+  }
+
+  .header__title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    text-transform: capitalize;
+    width: 100%;
+  }
+}

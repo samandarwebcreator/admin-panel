@@ -1,0 +1,85 @@
+@use "../../../../scss/mixins.scss" as mix;
+@use "../../../../scss/veriables.scss" as vars;
+
+.stock__single-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 20px;
+
+  .stock__single-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    .marketing__button {
+      @include mix.button-disable();
+      margin-bottom: -5px;
+      color: #d5dadd;
+      font-size: 14px;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  .stock__single-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    font-size: 16px;
+
+    a,
+    button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 5px;
+      padding: 10px 20px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.07);
+      }
+      span {
+        margin-bottom: -5px;
+      }
+    }
+
+    a {
+      color: vars.$status-inactive;
+      p {
+        font-weight: 400;
+      }
+    }
+
+    button {
+      @include mix.button-disable();
+      padding: 8px 20px;
+      font-size: 16px;
+      color: vars.$error-title;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.07);
+      }
+
+      span {
+        margin-bottom: -3px;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+// .tabchange__preview {
+//   width: 100%;
+//   height: 60px;
+//   background-color: #dddddd31;
+//   padding-left: 20px;
+//   margin-bottom: 2px;
+// }
