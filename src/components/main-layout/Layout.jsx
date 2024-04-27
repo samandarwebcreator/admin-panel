@@ -97,9 +97,9 @@ const LayoutMain = () => {
             defaultSelectedKeys={["1"]}
           >
             {marketingRoutes.map((item) => (
-              <span key={item.key} icon={item.name}>
+              <Menu.Item key={item.key} icon={item.name}>
                 <Link to={item.link}>{item.name}</Link>
-              </span>
+              </Menu.Item>
             ))}
           </Menu>
         </Sider>
