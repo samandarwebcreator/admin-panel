@@ -25,6 +25,36 @@ const OrderMain = () => {
     }),
   };
 
+  const items = [
+    {
+      key: "1",
+      label: "Курьер в пути",
+      children: (
+        <Table
+          rowSelection={rowSelection}
+          columns={columnsForOrder}
+          dataSource={[]}
+        />
+      ),
+    },
+    {
+      key: "2",
+      label: "Новый",
+      children: (
+        <Table
+          rowSelection={rowSelection}
+          columns={columnsForOrder}
+          dataSource={orders}
+        />
+      ),
+    },
+    {
+      key: "3",
+      label: "Оператор принял",
+      children: "Content of Tab Pane 3",
+    },
+  ];
+
   return (
     <div
       className="order__main"
@@ -35,23 +65,7 @@ const OrderMain = () => {
           : { marginLeft: 60 }
       }
     >
-      <Tabs className="tabs__main">
-        <TabPane tab="Tab 1" key="1">
-          <div>
-            <Table
-              rowSelection={rowSelection}
-              columns={columnsForOrder}
-              dataSource={orders}
-            />
-          </div>
-        </TabPane>
-        <TabPane tab="Tab 2" key="2">
-          Content of tab 2
-        </TabPane>
-        <TabPane tab="Tab 3" key="3">
-          Content of tab 3
-        </TabPane>
-      </Tabs>
+      <Tabs defaultActiveKey="1" items={items} />
     </div>
   );
 };

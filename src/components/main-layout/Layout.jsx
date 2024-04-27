@@ -14,6 +14,7 @@ import SingleStock from "../components/single-element/SingleStock";
 import Review from "../marketing/review/Review";
 import SingleReview from "../components/single-element/SingleReview";
 import Dashboard from "../dashboard/Dashboard";
+import OrderMain from "../order-body/OrderBody";
 
 const { Content, Sider } = Layout;
 
@@ -34,6 +35,13 @@ const LayoutMain = () => {
     case location.pathname === "/main/dashboard":
       componentContent = <Dashboard />;
       break;
+    case location.pathname === "/main/order":
+      componentContent = <OrderMain />;
+      break;
+
+    case location.pathname.slice(16) === "reviews":
+      componentContent = <Review />;
+      break;
 
     case location.pathname.slice(16) === "stock":
       componentContent = <Stock />;
@@ -41,9 +49,6 @@ const LayoutMain = () => {
 
     case location.pathname.slice(16) === "banners":
       componentContent = <Banner />;
-      break;
-    case location.pathname.slice(16) === "reviews":
-      componentContent = <Review />;
       break;
 
     case location.pathname.startsWith("/main/marketing/stock/single-user"):

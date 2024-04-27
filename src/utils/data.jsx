@@ -28,38 +28,53 @@ const columnsForOrder = [
   {
     title: "№",
     dataIndex: "userId",
+    key: "userId",
   },
   {
     title: "Клиент",
     dataIndex: "customerName",
+    key: "customerName",
+    render: (text, record, index) => (
+      <div>
+        <span>{`${record.customerName}`}</span>
+        <a href={`tel:${record.userNumber}`}></a>
+      </div>
+    ),
   },
   {
     title: "Ид.заказа",
     dataIndex: "orderId",
+    key: "orderId",
   },
   {
     title: "Таймер",
     dataIndex: "orderTime",
+    key: "orderTime",
   },
   {
     title: "Курьер",
     dataIndex: "deliverer",
+    key: "deliverer",
   },
   {
     title: "Филиал",
     dataIndex: "branch",
+    key: "branch",
   },
   {
     title: "Тип доставки",
     dataIndex: "deliveryType",
+    key: "deliveryType",
   },
   {
     title: "Цена заказа",
     dataIndex: "price",
+    key: "price",
   },
   {
     title: "Адресс клиента",
     dataIndex: "deliveryAddress",
+    key: "deliveryAddress",
   },
   {
     title: "Action",
@@ -68,11 +83,13 @@ const columnsForOrder = [
         <BsThreeDots style={{ color: "#4094F7", fontSize: "20px" }} />
       </Button>
     ),
+    key: "actionButton",
   },
 ];
 
 const orders = [
   {
+    key: 1,
     customerName: "Anvarjon",
     userId: 1,
     orderId: 2334372,
@@ -87,6 +104,7 @@ const orders = [
     branch: "Chilonzor",
   },
   {
+    key: 2,
     customerName: "John",
     userId: 2,
     orderId: 2334373,
@@ -101,6 +119,7 @@ const orders = [
     branch: "Chilonzor",
   },
   {
+    key: 3,
     customerName: "Alice",
     userId: 3,
     orderId: 2334374,
@@ -115,6 +134,7 @@ const orders = [
     branch: "Chilonzor",
   },
   {
+    key: 4,
     customerName: "Emily",
     userId: 4,
     orderId: 2334375,
@@ -129,6 +149,7 @@ const orders = [
     branch: "Yakkasaroy",
   },
   {
+    key: 5,
     customerName: "Michael",
     userId: 5,
     orderId: 2334376,
@@ -143,6 +164,7 @@ const orders = [
     branch: "Yakkasaroy",
   },
   {
+    key: 6,
     customerName: "Sophia",
     userId: 6,
     orderId: 2334377,
@@ -157,6 +179,7 @@ const orders = [
     branch: "Yakkasaroy",
   },
   {
+    key: 7,
     customerName: "William",
     userId: 7,
     orderId: 2334378,
@@ -171,6 +194,7 @@ const orders = [
     branch: "Yakkasaroy",
   },
   {
+    key: 8,
     customerName: "Olivia",
     userId: 8,
     orderId: 2334379,
@@ -185,6 +209,7 @@ const orders = [
     branch: "Uchtepa",
   },
   {
+    key: 9,
     customerName: "Daniel",
     userId: 9,
     orderId: 2334380,
@@ -199,6 +224,7 @@ const orders = [
     branch: "Uchtepa",
   },
   {
+    key: 10,
     customerName: "Emma",
     userId: 10,
     orderId: 2334381,
@@ -214,6 +240,7 @@ const orders = [
   },
 
   {
+    key: 11,
     customerName: "Liam",
     userId: 11,
     orderId: 2334382,
@@ -228,6 +255,7 @@ const orders = [
     branch: "Uchtepa",
   },
   {
+    key: 12,
     customerName: "Ava",
     userId: 12,
     orderId: 2334383,
@@ -242,6 +270,7 @@ const orders = [
     branch: "Uchtepa",
   },
   {
+    key: 13,
     customerName: "Noah",
     userId: 13,
     orderId: 2334384,
@@ -256,6 +285,7 @@ const orders = [
     branch: "Uchtepa",
   },
   {
+    key: 14,
     customerName: "Mia",
     userId: 14,
     orderId: 2334385,
